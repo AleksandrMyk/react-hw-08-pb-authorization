@@ -1,0 +1,30 @@
+.contactBox {
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+}
+
+.text {
+  width: 340px;
+  font-weight: 600;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 6px;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.itemBtn {
+  border-radius: 4px;
+  padding: 6px;
+  color: #000000;
+  text-align: center;
+  transition: all 0.15s;
+  border: 1px solid black;
+  font-weight: 600;
+}
+.itemBtn:hover {
+  background-color: #ff5858;
+}

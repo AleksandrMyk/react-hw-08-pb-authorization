@@ -1,0 +1,48 @@
+.box {
+  position: relative;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  margin: 0 auto;
+  margin-top: 25px;
+  align-items: center;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  color: #3a3a3a;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.521);
+}
+
+.mainTitle {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.spinner {
+  position: absolute;
+  width: 600px;
+  height: 100%;
+  padding: 0 10px;
+  background-color: rgba(0, 0, 0, 0.829);
+  border-radius: 5px;
+  color: white;
+  transition: all 200ms linear;
+  text-align: center;
+  line-height: 250px;
+  font-size: 34px;
+}
+/*--animation title---------------------------*/
+
+.appear {
+  transform: translateY(-100%);
+}
+.appearActive {
+  transform: translateY(0%);
+  transition: all 4000ms linear;
+}
+.appearDone {
+  color: rgb(96, 99, 255);
+  transition: color 700ms linear;
+}
