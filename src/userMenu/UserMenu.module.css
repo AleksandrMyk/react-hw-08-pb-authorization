@@ -1,40 +1,45 @@
 .menuBox {
-  position: absolute;
-  bottom: 0;
-  z-index: 2;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.fooBox {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  min-height: 150px;
-  align-items: center;
-  justify-content: flex-end;
-  text-align: center;
+  justify-content: center;
+  min-height: 200px;
+  width: 100vw;
   background-color: #fd11af73;
   border-top: 2px solid rgb(255, 255, 255);
 }
+
+.userBox {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-top: 15px;
+}
+
 .menuLink {
-  width: 100%;
+  min-width: 150px;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
   background-color: #fd11ae9f;
-  margin: 0;
-  padding: 0;
-  color: #fff;
-  border: none;
-  font-weight: 400;
-  font-size: 16px;
-  cursor: pointer;
-  text-transform: lowercase;
-  height: 25px;
-  padding: 4px 0;
-  margin-bottom: 8px;
+  padding: 8px 4px;
+  margin-right: 8px;
+  color: #ffffff;
+}
+.menuLink:hover {
+  background-color: #ffffff;
+  color: #fd11ae;
+  font-weight: 700;
 }
 
 .name {
   color: white;
-  margin-bottom: 4px;
-  font-size: 18px;
+  font-size: 26px;
   text-transform: uppercase;
-}
-
-.avatar {
-  margin-bottom: 5px;
 }

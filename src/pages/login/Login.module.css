@@ -1,4 +1,7 @@
 .secLog {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-image: url(../../img/log.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -13,7 +16,6 @@
   width: 500px;
   margin: 0 auto;
   align-items: center;
-  padding-top: 270px;
   color: #ffffff;
 }
 .contactInput {

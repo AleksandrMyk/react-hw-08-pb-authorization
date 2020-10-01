@@ -13,14 +13,23 @@ const ContactItem = ({ name, number, onRemoveContact }) => {
             {name}: {number}
           </p>
         </div>
-        <div>
+        <div className={styles.btnBox}>
           <button
             className={styles.itemBtn}
             onClick={onRemoveContact}
             type="button"
+            title="delete"
           >
             Delete
           </button>
+          <a
+            href="mailto:someone@mail.com"
+            title="mail"
+            target="blank"
+            className={styles.itemBtn}
+          >
+            mail
+          </a>
         </div>
       </div>
     </li>

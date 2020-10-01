@@ -18,7 +18,7 @@ class App extends Component {
     return (
       <div>
         <BrowserRouter>
-          <Header />
+          {/* <Header /> */}
           <Suspense fallback={<Alert />}>
             <Switch>
               {routes.map(route => {
@@ -30,7 +30,7 @@ class App extends Component {
               })}
             </Switch>
           </Suspense>
-          <FooApp />
+          {/* <FooApp /> */}
         </BrowserRouter>
       </div>
     );

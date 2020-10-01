@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { CSSTransition } from 'react-transition-group';
 import AuthOperations from '../../redux/auth/AuthOperations';
 import style from './Register.module.css';
+import Header from '../../header/Header';
+import FooApp from '../../fooApp/FooApp';
 
 class Register extends Component {
   state = {
@@ -26,54 +28,58 @@ class Register extends Component {
   render() {
     const { name, email, password } = this.state;
     return (
-      <section className={style.secReg}>
-        <form className={style.regForm} onSubmit={this.handleSubmit}>
-          <CSSTransition
-            in={true}
-            appear={true}
-            classNames={style}
-            timeout={1500}
-          >
-            <h1 className={style.titleReg}>registration form</h1>
-          </CSSTransition>
-          <label className={style.labelForm}>
-            name
-            <input
-              className={style.regInput}
-              name="name"
-              value={name}
-              onChange={this.handleChange}
-              type="name"
-              autoComplete="off"
-            ></input>
-          </label>
-          <label className={style.labelForm}>
-            email
-            <input
-              className={style.regInput}
-              name="email"
-              value={email}
-              onChange={this.handleChange}
-              type="email"
-              autoComplete="off"
-            ></input>
-          </label>
-          <label className={style.labelForm}>
-            password
-            <input
-              className={style.regInput}
-              name="password"
-              value={password}
-              onChange={this.handleChange}
-              type="password"
-              autoComplete="off"
-            ></input>
-          </label>
-          <button className={style.btnAdd} type="submit">
-            reg me
-          </button>
-        </form>
-      </section>
+      <div className={style.secReg}>
+        <Header />
+        <section>
+          <form className={style.regForm} onSubmit={this.handleSubmit}>
+            <CSSTransition
+              in={true}
+              appear={true}
+              classNames={style}
+              timeout={1000}
+            >
+              <h1 className={style.titleReg}>registration form</h1>
+            </CSSTransition>
+            <label className={style.labelForm}>
+              name
+              <input
+                className={style.regInput}
+                name="name"
+                value={name}
+                onChange={this.handleChange}
+                type="name"
+                autoComplete="off"
+              ></input>
+            </label>
+            <label className={style.labelForm}>
+              email
+              <input
+                className={style.regInput}
+                name="email"
+                value={email}
+                onChange={this.handleChange}
+                type="email"
+                autoComplete="off"
+              ></input>
+            </label>
+            <label className={style.labelForm}>
+              password
+              <input
+                className={style.regInput}
+                name="password"
+                value={password}
+                onChange={this.handleChange}
+                type="password"
+                autoComplete="off"
+              ></input>
+            </label>
+            <button className={style.btnAdd} type="submit">
+              reg me
+            </button>
+          </form>
+        </section>
+        <FooApp />
+      </div>
     );
   }
 }

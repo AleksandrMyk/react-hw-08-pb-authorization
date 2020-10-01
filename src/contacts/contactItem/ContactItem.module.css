@@ -5,10 +5,12 @@
 }
 
 .text {
-  width: 340px;
-  font-weight: 600;
-  border: 1px solid black;
+  width: 300px;
+  height: 30px;
+  background-color: #fd11af73;
+  border: 2px solid #ffffff;
   border-radius: 4px;
+  color: white;
   padding: 6px;
 }
 
@@ -17,14 +19,22 @@
 }
 
 .itemBtn {
+  cursor: pointer;
   border-radius: 4px;
   padding: 6px;
-  color: #000000;
+  color: #ffffff;
   text-align: center;
   transition: all 0.15s;
-  border: 1px solid black;
-  font-weight: 600;
+  border: 1px solid rgb(255, 255, 255);
+  background-color: #ff5858;
+  text-transform: lowercase;
 }
 .itemBtn:hover {
-  background-color: #ff5858;
+  background-color: #fdfdfd;
+  color: #ff5858;
+  font-weight: 700;
+}
+
+.btnBox {
+  display: flex;
 }

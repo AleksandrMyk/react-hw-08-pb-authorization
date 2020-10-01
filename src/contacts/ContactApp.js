@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import { connect } from 'react-redux';
 import style from './ContactApp.module.css';
 import ContactForm from './contactForm/ContactForm';
@@ -7,6 +6,8 @@ import ContactList from './contactList/ContactList.js';
 import ContactFilter from './contactFilter/ContactFilter';
 import Operations from '../redux/Operations';
 import Selectors from '../redux/Selectors';
+import FooApp from '../fooApp/FooApp';
+import Header from '../header/Header';
 // import { AuthSelectors } from '../redux/auth';
 
 class ContactApp extends Component {
@@ -31,17 +32,13 @@ class ContactApp extends Component {
   render() {
     return (
       <>
-        <section className={style.contBox}>
-          {/* {this.props.isLoading && (
-              <div className={style.spinner}>
-                <h1>L..O..A..D..I..N..G</h1>
-              </div>
-            )} */}
-
+        <div className={style.contBox}>
+          <Header />
           <ContactForm />
           <ContactFilter />
           <ContactList />
-        </section>
+          <FooApp />
+        </div>
       </>
     );
   }

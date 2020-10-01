@@ -1,13 +1,13 @@
 .secBox {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-image: url(../img/1-min.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
-  padding-top: 300px;
 }
 
 .pacageBox {

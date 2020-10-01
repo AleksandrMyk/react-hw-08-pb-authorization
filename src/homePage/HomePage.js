@@ -5,7 +5,8 @@ import style from './HomePage.module.css';
 import Clock from 'react-clock';
 import 'react-clock/dist/Clock.css';
 import FeedbackApp from '../feedback/FeedbackApp';
-
+import FooApp from '../fooApp/FooApp';
+import Header from '../header/Header';
 
 class HomePage extends Component {
   state = {
@@ -32,8 +33,9 @@ class HomePage extends Component {
   render() {
     return (
       <>
-        <section className={style.secBox}>
-          <div className={style.pacageBox}>
+        <div className={style.secBox}>
+          <Header />
+          <section className={style.pacageBox}>
             <div>
               <Calendar
                 className={style.calBox}
@@ -47,8 +49,9 @@ class HomePage extends Component {
             <div>
               <FeedbackApp />
             </div>
-          </div>
-        </section>
+          </section>
+          <FooApp />
+        </div>
       </>
     );
   }

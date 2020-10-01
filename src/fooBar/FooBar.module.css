@@ -1,23 +1,29 @@
 .fooLink {
-  width: 100%;
+  min-width: 150px;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
   background-color: #fd11ae9f;
-  height: 25px;
-  padding: 4px 0;
+  padding: 8px 4px;
   margin-bottom: 8px;
+}
+.fooLink:hover {
+  background-color: #ffffff;
+  color: #fd11ae;
+  font-weight: 700;
 }
 
 .fooBox {
-  position: absolute;
+  /* position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 2;
+  z-index: 2; */
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 150px;
+  min-height: 200px;
   padding-top: 5px;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   color: #ffffff;
   text-align: center;
   background-color: #fd11af73;

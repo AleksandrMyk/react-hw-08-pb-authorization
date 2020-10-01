@@ -34,7 +34,7 @@ class ContactForm extends Component {
           in={true}
           appear={true}
           classNames={style}
-          timeout={2500}
+          timeout={1000}
         >
           <h1 className={style.mainTitle}>Phonebook</h1>
         </CSSTransition>

@@ -1,4 +1,7 @@
 .contBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-image: url(../img/cont.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -6,17 +9,4 @@
   object-fit: contain;
   min-height: 100vh;
   width: 100vw;
-}
-
-.spinner {
-  width: 600px;
-  height: 100%;
-  padding: 0 10px;
-  background-color: rgba(0, 0, 0, 0.829);
-  border-radius: 5px;
-  color: white;
-  transition: all 200ms linear;
-  text-align: center;
-  line-height: 250px;
-  font-size: 34px;
 }
