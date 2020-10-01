@@ -1,7 +1,7 @@
 import axios from 'axios';
 import Actions from './Actions';
 
-axios.defaults.baseURL = 'http://localhost:2000';
+// axios.defaults.baseURL = 'http://localhost:2000';
 
 const addContact = (name, number) => dispatch => {
   dispatch(Actions.addContRequest());

@@ -1,0 +1,29 @@
+/*HEADER*/
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100px;
+  background-color: #fd11af73;
+  border-bottom: 2px solid white;
+  padding-bottom: 50px;
+}
+
+
+
+.navTitle {
+  color: #fff;
+  font-size: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  padding-top: 75px;
+}
+
+.subtitle {
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+}

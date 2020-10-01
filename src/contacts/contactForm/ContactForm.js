@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { CSSTransition } from 'react-transition-group';
 import style from './ContactForm.module.css';
-import Actions from '../redux/Actions';
-import Operations from '../redux/Operations';
+import Operations from '../../redux/Operations';
 
 class ContactForm extends Component {
   state = {
@@ -31,6 +30,14 @@ class ContactForm extends Component {
     const { name, number } = this.state;
     return (
       <form className={style.contactForm} onSubmit={this.handleSubmit}>
+        <CSSTransition
+          in={true}
+          appear={true}
+          classNames={style}
+          timeout={2500}
+        >
+          <h1 className={style.mainTitle}>Phonebook</h1>
+        </CSSTransition>
         <label className={style.labelForm}>
           Name
           <br />
@@ -47,7 +54,6 @@ class ContactForm extends Component {
               autoComplete="off"
               value={name}
               onChange={this.changeHandler}
-              placeholder="enter name"
             />
           </CSSTransition>
         </label>
@@ -67,7 +73,6 @@ class ContactForm extends Component {
               autoComplete="off"
               value={number}
               onChange={this.changeHandler}
-              placeholder="enter number"
               pattern="[0-9]{1}[0-9]{1}"
             />
           </CSSTransition>

@@ -1,0 +1,29 @@
+.filterForm {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: 0 auto;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.filterInput {
+  width: 400px;
+  font-size: 18px;
+  padding-left: 10px;
+  font-weight: 700;
+  height: 30px;
+  background-color: #fd11af73;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+}
+
+.filterLabel {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: white;
+}

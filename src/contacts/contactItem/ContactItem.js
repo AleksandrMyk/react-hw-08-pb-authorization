@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import styles from './ContactItem.module.css';
-import Operations from '../redux/Operations';
-import Selectors from '../redux/Selectors';
+import Operations from '../../redux/Operations';
+import Selectors from '../../redux/Selectors';
 
 const ContactItem = ({ name, number, onRemoveContact }) => {
   return (

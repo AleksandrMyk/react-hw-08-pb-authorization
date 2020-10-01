@@ -17,6 +17,8 @@ body {
   text-rendering: optimizeLegibility;
   text-decoration-skip: objects;
   -webkit-text-size-adjust: 100%;
+  display: flex;
+  flex-direction: column;
 }
 ul,
 ol,

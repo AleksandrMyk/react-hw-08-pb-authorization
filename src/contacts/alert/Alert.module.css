@@ -1,0 +1,11 @@
+.alert {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+  color: white;
+  font-weight: 700;
+  font-size: 40px;
+  justify-content: center;
+  align-items: center;
+}

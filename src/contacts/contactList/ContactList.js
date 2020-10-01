@@ -3,7 +3,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { connect } from 'react-redux';
 import styles from './ContactList.module.css';
 import ContactItem from '../contactItem/ContactItem';
-import Selectors from '../redux/Selectors';
+import Selectors from '../../redux/Selectors';
 
 const ContactList = ({ contacts }) => {
   return (
