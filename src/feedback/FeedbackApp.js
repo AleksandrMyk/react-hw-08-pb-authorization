@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import Buttons from './button/Buttons';
 import Statistics from './statistic/Statistic';
 import Section from './section/Section.js';

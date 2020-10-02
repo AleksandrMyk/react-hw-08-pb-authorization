@@ -1,5 +1,4 @@
 import React from 'react';
-import { CSSTransition } from 'react-transition-group';
 import { connect } from 'react-redux';
 import style from './ContactFilter.module.css';
 import Actions from '../../redux/Actions';

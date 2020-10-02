@@ -34,20 +34,20 @@ class HomePage extends Component {
     return (
       <>
         <div className={style.secBox}>
-          <Header />
+          <Header className={style.header}/>
           <section className={style.pacageBox}>
+            <div className={style.feedback}>
+              <FeedbackApp />
+            </div>
+            <div className={style.clockBox}>
+              <Clock value={this.state.time.toLocaleTimeString()} />
+            </div>
             <div>
               <Calendar
                 className={style.calBox}
                 onChange={this.onChange}
                 value={this.state.date}
               />
-            </div>
-            <div className={style.clockBox}>
-              <Clock value={this.state.time.toLocaleTimeString()} />
-            </div>
-            <div>
-              <FeedbackApp />
             </div>
           </section>
           <FooApp />

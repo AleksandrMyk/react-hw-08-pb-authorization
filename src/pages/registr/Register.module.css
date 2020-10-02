@@ -5,21 +5,21 @@
   background-image: url(../../img/reg.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 }
 
 .regForm {
   display: flex;
   flex-direction: column;
-  width: 500px;
+  width: 100%;
   margin: 0 auto;
   align-items: center;
   color: white;
 }
 .regInput {
-  width: 400px;
+  width: 80%;
   font-size: 18px;
   padding-left: 10px;
   font-weight: 700;
@@ -32,7 +32,8 @@
 .labelForm {
   display: flex;
   flex-direction: column;
-  width: 400px;
+  width: 80%;
+  align-items: center;
   cursor: pointer;
   font-size: 16px;
   margin-bottom: 20px;
@@ -45,7 +46,7 @@
 .btnAdd {
   display: inline-block;
   padding: 5px 15px;
-  width: 400px;
+  width: 65%;
   height: auto;
   border: 2px solid #ffffff;
   border-radius: 4px;
@@ -69,4 +70,15 @@
 .appearDone {
   color: #ffffff;
   transition: color 700ms linear;
+}
+
+@media (min-width: 600px) and (max-width: 1920px) {
+  .labelForm {
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .btnAdd {
+    width: 32%;
+  }
 }

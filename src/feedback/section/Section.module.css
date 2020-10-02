@@ -7,3 +7,14 @@
   border-radius: 10px;
   background-color: #ffffff;
 }
+
+@media (max-width: 599px) {
+  .section {
+    background-color: #ffffff00;
+  }
+}
+@media (min-width: 600px) and (max-width: 1279px) {
+  .section {
+    background-color: #ffffff00;
+  }
+}

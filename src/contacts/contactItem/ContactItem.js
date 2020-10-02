@@ -23,7 +23,7 @@ const ContactItem = ({ name, number, onRemoveContact }) => {
             Delete
           </button>
           <a
-            href="mailto:someone@mail.com"
+            href={`mailto:${name}@React-mail.JS`}
             title="mail"
             target="blank"
             className={styles.itemBtn}

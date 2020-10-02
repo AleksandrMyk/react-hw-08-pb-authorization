@@ -3,8 +3,6 @@ import { Switch } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { AuthOperations } from './redux/auth';
-import FooApp from './fooApp/FooApp';
-import Header from './header/Header';
 import routes from './routes';
 import PrivateRoute from './getRoutes/PrivateRoute';
 import PublicRoute from './getRoutes/PublicRoute';
@@ -18,7 +16,6 @@ class App extends Component {
     return (
       <div>
         <BrowserRouter>
-          {/* <Header /> */}
           <Suspense fallback={<Alert />}>
             <Switch>
               {routes.map(route => {
@@ -30,7 +27,6 @@ class App extends Component {
               })}
             </Switch>
           </Suspense>
-          {/* <FooApp /> */}
         </BrowserRouter>
       </div>
     );
