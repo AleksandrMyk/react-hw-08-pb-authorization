@@ -8,11 +8,11 @@ const Filter = ({ value, onFilter }) => {
   return (
     <form className={style.filterForm}>
       <label className={style.filterLabel}>
-        Find contacts by name
         <input
           className={style.filterInput}
           type="text"
           autoComplete="off"
+          placeholder="find contacts by name"
           value={value}
           onChange={e => onFilter(e.target.value)}
         ></input>

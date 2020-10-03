@@ -3,11 +3,11 @@ import Actions from './Actions';
 
 // axios.defaults.baseURL = 'http://localhost:2000';
 
-const addContact = (name, number) => dispatch => {
+const addContact = contact => dispatch => {
   dispatch(Actions.addContRequest());
 
   axios
-    .post('/contacts', { name, number })
+    .post('/contacts', contact)
     .then(response => dispatch(Actions.addContSuccess(response.data)))
     .catch(error => dispatch(Actions.addContError(error)));
 };

@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { CSSTransition } from 'react-transition-group';
 import style from './ContactForm.module.css';
+import NumberFormat from 'react-number-format';
 import Operations from '../../redux/Operations';
+import Selectors from '../../redux/Selectors';
 
 class ContactForm extends Component {
   state = {
@@ -17,9 +19,23 @@ class ContactForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const { name, number } = this.state;
 
-    this.props.onSubmit(name, number);
+    const { name, number } = this.state;
+    const existedContacts = this.props.contacts.find(
+      cont => cont.name === name,
+    );
+
+    if (existedContacts) {
+      alert('CONTACT IS ALREADY ON BOARD!!!');
+    } else if (name === '' || number === '') {
+      alert(`BE CALM AND FIELD ALL FIELDS!!!`);
+    } else {
+      this.props.onSubmit({
+        name: name,
+        number: number,
+      });
+    }
+
     this.setState({
       name: '',
       number: '',
@@ -39,43 +55,28 @@ class ContactForm extends Component {
           <h1 className={style.mainTitle}>Phonebook</h1>
         </CSSTransition>
         <label className={style.labelForm}>
-          Name
-          <br />
-          <CSSTransition
-            in={true}
-            appear={true}
-            classNames={style}
-            timeout={3000}
-          >
-            <input
-              className={style.contactInput}
-              name="name"
-              type="text"
-              autoComplete="off"
-              value={name}
-              onChange={this.changeHandler}
-            />
-          </CSSTransition>
+          <input
+            className={style.contactInput}
+            name="name"
+            type="text"
+            autoComplete="off"
+            value={name}
+            onChange={this.changeHandler}
+            placeholder="name"
+          />
         </label>
         <label className={style.labelForm}>
-          Number in format 00
-          <br />
-          <CSSTransition
-            in={true}
-            appear={true}
-            classNames={style}
-            timeout={3000}
-          >
-            <input
-              className={style.contactInput}
-              name="number"
-              type="tel"
-              autoComplete="off"
-              value={number}
-              onChange={this.changeHandler}
-              pattern="[0-9]{1}[0-9]{1}"
-            />
-          </CSSTransition>
+          <NumberFormat
+            className={style.contactInput}
+            name="number"
+            type="tel"
+            autoComplete="off"
+            value={number}
+            onChange={this.changeHandler}
+            format="+380 (##) ###-####"
+            allowEmptyFormatting
+            mask="_"
+          />
         </label>
 
         <button className={style.btnAdd} type="submit">
@@ -85,9 +86,11 @@ class ContactForm extends Component {
     );
   }
 }
-
+const mapStateToProps = state => ({
+  contacts: Selectors.getItems(state),
+});
 const mapDispatchToProps = {
   onSubmit: Operations.addContact,
 };
 
-export default connect(null, mapDispatchToProps)(ContactForm);
+export default connect(mapStateToProps, mapDispatchToProps)(ContactForm);

@@ -43,20 +43,17 @@ class LoginPage extends Component {
               <h1 className={style.titleLog}>login form</h1>
             </CSSTransition>
             <label className={style.labelForm}>
-              e-mail
-              <br />
               <input
                 className={style.contactInput}
                 name="email"
                 value={email}
                 onChange={this.handleChange}
                 type="email"
-                autoComplete="off"
+                autoComplete="on"
+                placeholder="e-mail"
               ></input>
             </label>
             <label className={style.labelForm}>
-              password
-              <br />
               <input
                 className={style.contactInput}
                 name="password"
@@ -64,6 +61,7 @@ class LoginPage extends Component {
                 onChange={this.handleChange}
                 type="password"
                 autoComplete="off"
+                placeholder=" password"
               ></input>
             </label>
 

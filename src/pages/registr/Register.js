@@ -41,29 +41,28 @@ class Register extends Component {
               <h1 className={style.titleReg}>registration form</h1>
             </CSSTransition>
             <label className={style.labelForm}>
-              name
               <input
                 className={style.regInput}
                 name="name"
                 value={name}
                 onChange={this.handleChange}
                 type="name"
-                autoComplete="off"
+                autoComplete="on"
+                placeholder="name"
               ></input>
             </label>
             <label className={style.labelForm}>
-              email
               <input
                 className={style.regInput}
                 name="email"
                 value={email}
                 onChange={this.handleChange}
                 type="email"
-                autoComplete="off"
+                autoComplete="on"
+                placeholder="email"
               ></input>
             </label>
             <label className={style.labelForm}>
-              password
               <input
                 className={style.regInput}
                 name="password"
@@ -71,6 +70,7 @@ class Register extends Component {
                 onChange={this.handleChange}
                 type="password"
                 autoComplete="off"
+                placeholder="password"
               ></input>
             </label>
             <button className={style.btnAdd} type="submit">
