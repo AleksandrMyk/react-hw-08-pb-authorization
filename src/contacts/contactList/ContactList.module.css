@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  margin-bottom: 10px;
+  width: 100%;
 }
 
 /*-------animation list-----------------*/
@@ -20,4 +20,20 @@
 .exitActive {
   transform: translateX(-100%);
   transition: transform 250ms linear;
+}
+
+@media (max-width: 599px) {
+  .list {
+    width: 60%;
+  }
+}
+@media (min-width: 600px) and (max-width: 1279px) {
+  .list {
+    width: 50%;
+  }
+}
+@media (min-width: 1280px) and (max-width: 1920px) {
+  .list {
+    width: 40%;
+  }
 }

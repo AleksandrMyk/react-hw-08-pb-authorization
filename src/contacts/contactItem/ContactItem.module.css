@@ -1,11 +1,12 @@
 .contactBox {
   display: flex;
-  width: 400px;
-  justify-content: space-between;
+  width: 100%;
+  /* justify-content: space-between; */
 }
 
 .text {
-  width: 300px;
+  display: flex;
+  width: 100%;
   height: 30px;
   background-color: #fd11af73;
   border: 2px solid #ffffff;

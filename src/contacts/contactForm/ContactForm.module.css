@@ -1,14 +1,14 @@
 .contactForm {
   display: flex;
   flex-direction: column;
-  width: 500px;
+  width: 100%;
   margin: 0 auto;
   align-items: center;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   color: #ffffff;
 }
 .contactInput {
-  width: 400px;
+  width: 100%;
   font-size: 18px;
   padding-left: 10px;
   font-weight: 700;
@@ -16,21 +16,22 @@
   background-color: #fd11af73;
   border: 2px solid #ffffff;
   border-radius: 4px;
+  margin: 0 auto;
 }
 
 .labelForm {
   display: flex;
   flex-direction: column;
-  width: 400px;
+  width: 100%;
   cursor: pointer;
   font-size: 16px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .btnAdd {
-  display: inline-block;
   padding: 5px 15px;
-  width: 400px;
+  width: 100%;
   height: auto;
   border: 2px solid #ffffff;
   border-radius: 4px;
@@ -51,7 +52,7 @@
 }
 
 .mainTitle {
-  text-transform: uppercase;
+  text-transform: lowercase;
   font-weight: 700;
   color: #fd11ae00;
 }
@@ -61,4 +62,24 @@
 .appearDone {
   color: #ffffff;
   transition: color 700ms linear;
+}
+
+@media (max-width: 599px) {
+  .contactInput,
+  .btnAdd {
+    width: 60%;
+  }
+}
+@media (min-width: 600px) and (max-width: 1279px) {
+  .contactInput,
+  .btnAdd {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1920px) {
+  .contactInput,
+  .btnAdd {
+    width: 40%;
+  }
 }

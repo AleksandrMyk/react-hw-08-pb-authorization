@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   text-align: center;
+  margin: 0 auto;
 }
 
 .fooBox {
@@ -9,7 +10,7 @@
   flex-direction: column;
   justify-content: center;
   height: auto;
-  width: 100vw;
+  width: 100%;
   background-color: #fd11af73;
   border-top: 2px solid rgb(255, 255, 255);
   padding-bottom: 10px;
@@ -43,4 +44,20 @@
   color: white;
   font-size: 26px;
   text-transform: uppercase;
+}
+
+@media (max-width: 599px) {
+  .menuBox {
+    flex-direction: column;
+  }
+  .menuLink {
+    width: 150px;
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+    background-color: #fd11ae9f;
+    padding: 8px 4px;
+    margin-right: 8px;
+    margin-bottom: 6px;
+    color: #ffffff;
+  }
 }
