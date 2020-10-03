@@ -25,15 +25,15 @@
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
-    padding: 15px 0;
+    padding: 15px 10px;
   }
 
   .feedback,
   .clockBox {
-    padding-bottom: 15px;
+    margin-bottom: 15px;
   }
   .calBox {
-    width: 500px;
+    width: 400px;
   }
 }
 
@@ -48,7 +48,7 @@
   }
   .feedback,
   .clockBox {
-    padding-bottom: 15px;
+    margin-bottom: 15px;
   }
   .feedback,
   .calBox {

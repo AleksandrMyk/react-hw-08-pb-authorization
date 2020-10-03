@@ -1,32 +1,54 @@
 button {
-display: inline-block;
-padding: 0.5em 3em;
-border: 2px solid #000000;
-border-radius: 5px;
-margin: 0 2px;
-box-sizing: border-box;
-text-decoration: none;
-text-transform: uppercase;
-font-family: 'Roboto',sans-serif;
-font-weight: 600; 
-color :#000000;
-text-align: center;
-transition: all 0.15s;
+  padding: 0.5em 3em;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  margin: 0 2px;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  color: #000000;
+  text-align: center;
+  transition: all 0.15s;
 }
 .btng {
-	background-color: #7bff8d;
+  background-color: #7bff8d;
 }
 .btnn {
-	background-color: #fbfd6e;
+  background-color: #fbfd6e;
 }
 .btnb {
-	background-color: #ff8484;
+  background-color: #ff8484;
 }
-button:hover{
-background-color:#4d4848;
-color: white;
+button:hover {
+  background-color: #4d4848;
+  color: white;
 }
-button:active{
-background-color:#4d4848;
-color: white;
+button:active {
+  background-color: #4d4848;
+  color: white;
+}
+
+.btnBox {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 599px) {
+  .btnBox {
+    flex-direction: column;
+    width: 100%;
+  }
+  .btng,
+  .btnn {
+    margin-bottom: 6px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1279px) {
+  .btnBox {
+    width: 70%;
+  }
 }

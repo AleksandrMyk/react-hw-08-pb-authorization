@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 function Buttons({ onGood, onNeutral, onBad }) {
   return (
-    <div>
+    <div className={style.btnBox}>
       <button className={style.btng} onClick={onGood} type="button">
         Good
       </button>
