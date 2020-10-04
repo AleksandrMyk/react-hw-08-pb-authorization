@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { CSSTransition } from 'react-transition-group';
-import authOperations from '../../redux/auth/AuthOperations';
+import { AuthOperations, AuthSelectors } from '../../redux/auth';
 import style from './Login.module.css';
 import Header from '../../header/Header';
 import FooApp from '../../fooApp/FooApp';
@@ -77,7 +77,7 @@ class LoginPage extends Component {
 }
 
 const mapDispatchToProps = {
-  onLogin: authOperations.logIn,
+  onLogin: AuthOperations.logIn,
 };
 
 export default compose(connect(null, mapDispatchToProps))(LoginPage);
