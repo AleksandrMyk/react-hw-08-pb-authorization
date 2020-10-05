@@ -13,15 +13,24 @@ class LoginPage extends Component {
     password: '',
   };
 
-  handleChange = e =>
-    this.setState({
-      [e.currentTarget.name]: e.currentTarget.value,
-    });
+  handleEmail = e => {
+    this.setState({ email: e.target.value });
+  };
+
+  handlePassword = e => {
+    this.setState({ password: e.target.value });
+  };
 
   handleSubmit = e => {
     e.preventDefault();
+    const { email, password } = this.state;
+    const loginUser = { email, password };
 
-    this.props.onLogin(this.state);
+    if ((email === '' && password === '') || email === '' || password === '') {
+      alert('Enter your email and/or password');
+    } else {
+      this.props.onLogin(loginUser);
+    }
 
     this.setState({ email: '', password: '' });
   };
@@ -38,7 +47,7 @@ class LoginPage extends Component {
               in={true}
               appear={true}
               classNames={style}
-              timeout={1000}
+              timeout={1200}
             >
               <h1 className={style.titleLog}>login form</h1>
             </CSSTransition>
@@ -47,7 +56,7 @@ class LoginPage extends Component {
                 className={style.contactInput}
                 name="email"
                 value={email}
-                onChange={this.handleChange}
+                onChange={e => this.handleEmail(e)}
                 type="email"
                 autoComplete="on"
                 placeholder="e-mail"
@@ -58,7 +67,7 @@ class LoginPage extends Component {
                 className={style.contactInput}
                 name="password"
                 value={password}
-                onChange={this.handleChange}
+                onChange={e => this.handlePassword(e)}
                 type="password"
                 autoComplete="off"
                 placeholder=" password"

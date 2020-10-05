@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { AuthSelectors } from '../redux/auth';
+import routes from '../routes';
 
 const PublicRoute = ({
   component: Component,
